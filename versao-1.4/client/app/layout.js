@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
@@ -16,11 +15,6 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="pt-BR" className={styles.html}>
-
-      <Head>
-        <Link rel='icon' href='/boladefogo.ico' size="16x16" type="image/x-icon" />
-
-      </Head>
 
       <body className={inter.className}>
         <div>
