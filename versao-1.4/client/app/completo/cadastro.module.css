@@ -1,0 +1,235 @@
+.html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(200, 220, 215);
+
+}
+
+.containerLogin {
+    width: 100%;
+    min-height: 75vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+
+}
+
+.wrapLogin {
+    width: 400px;
+
+    background-color: rgb(190, 208, 202);
+
+    border-radius: 0.75rem;
+
+    overflow: hidden;
+
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+
+    box-shadow: 0 0.25rem 0 rgba(78, 151, 68, 0.2);
+
+}
+
+.loginForm {
+    width: 100%;
+
+}
+
+.loginFormTitle {
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    color: green;
+
+    line-height: 1.2;
+    text-align: center;
+
+    margin-bottom: 0.75rem;
+
+}
+
+.login-form-title img {
+    width: 4.5rem;
+
+    margin-bottom: 0.75rem;
+
+}
+
+.wrapInput {
+    width: 100%;
+    position: relative;
+    border-bottom: 0.125rem solid green;
+    margin-bottom: 2rem;
+
+}
+
+.input {
+    font-size: 1.25rem;
+    color: green;
+    line-height: 1.2;
+    border: none;
+    display: block;
+
+    width: 100%;
+    height: 2.813rem;
+
+    background-color: rgb(167, 188, 157);
+
+    padding: 0 0.313rem;
+
+}
+
+.focusInput {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+    color: green; 
+
+}
+
+.focusInput::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.125rem;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+
+    background: -webkit-linear-gradient(to left, #71c054, #14e025);
+    background: -o-linear-gradient(to left, #71c054, #14e025);
+    background: -moz-linear-gradient(to left, #71c054, #14e025);
+    background: linear-gradient(to left, #71c054, #14e025);
+
+}
+
+.focusInput::after {
+    font-size: 1rem;
+    color: #777373;
+    line-height: 1.2;
+
+    content: attr(data-placeholder);
+
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+
+    padding-left: 0.313rem;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+
+}
+
+.input:focus {
+    outline: 0;
+
+}
+
+.input:focus + .focusInput::after {
+    top: -1.25rem;
+
+}
+
+.input:focus + .focusInput::before {
+    width: 100%;
+
+}
+
+.hasVal + .focusInput::after {
+    top: -1.25rem;
+
+}
+
+.hasVal + .focus-input::before {
+    width: 100%;
+
+}
+
+.containerLoginFormBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+}
+
+.loginFormBtn {
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    color: black;
+    background-color: rgb(167, 188, 157);
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 2.5rem;
+
+    background: -webkit-linear-gradient(to left, rgb(167, 188, 157), green);
+    background: -o-linear-gradient(to left, rgb(167, 188, 157), green);
+    background: -moz-linear-gradient(to left, rgb(167, 188, 157), green);
+    background: linear-gradient(to left, rgb(167, 188, 157), green);
+
+}
+
+.loginFormBtn:hover {
+    cursor: pointer;
+
+}
+
+.textCenter {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 2.5rem;
+
+}
+
+.txt1 {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.5;
+    padding-right: 0.75rem;
+    text-decoration: none;
+
+}
+
+.txt2 {
+    font-size: 1rem;
+    color: green;
+    line-height: 1.5;
+    text-decoration: none;
+
+}

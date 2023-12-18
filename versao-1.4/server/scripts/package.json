@@ -1,0 +1,16 @@
+{
+  "name": "scripts-importacoes",
+  "version": "1.0.0",
+  "description": "Scripts Importações - Futebol Total",
+  "scripts": {
+    "times": "node importa_times.js",
+    "jogos": "node importa_jogos.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^16.3.1",
+    "moment-timezone": "^0.5.43",
+    "mysql2": "^2.3.0"
+  },
+  "type": "module"
+}
