@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR" className={styles.html}>
 
       <Head>
-        <Link rel='icon' href='/boladefogo.ico' />
+        <Link rel='icon' href='/boladefogo.ico' size="16x16" type="image/x-icon" />
 
       </Head>
 

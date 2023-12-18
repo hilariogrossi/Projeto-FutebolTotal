@@ -95,7 +95,7 @@ export default function Header() {
       <nav id={styles.cabecalho}>
 
         <a href="/" className="logo">
-          <Image src="/images/boladefogo.png" width={55} height={55} />
+          <Image src="/images/boladefogo.png" width={55} height={55} alt="Imagem Bola de Fogo" />
 
         </a>
 
@@ -120,7 +120,7 @@ export default function Header() {
         </span>
 
         <span className={styles.span_1}>
-          <Image src="/images/pipeline.png" width={30} height={30} />
+          <Image src="/images/pipeline.png" width={30} height={30} alt="Imagem Pipe Line" />
 
         </span>
 
