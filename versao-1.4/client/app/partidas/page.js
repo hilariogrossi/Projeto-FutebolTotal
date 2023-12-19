@@ -9,21 +9,6 @@ export default function Partidas() {
 
     const [partidas, setPartidas] = useState([]);
 
-    let dataHoraStr = "2023-04-15T16:00:00.000Z";
-    let dataHoraObj = new Date(dataHoraStr);
-    let dataHoraFormatada = `${(dataHoraObj
-        .getUTCDay() + 100)
-        .toString()
-        .substring(1)}/${(dataHoraObj.getUTCMonth() + 101)
-        .toString().substring(1)}/${dataHoraObj
-        .getUTCFullYear()} ${dataHoraObj
-        .getUTCHours()}:${(dataHoraObj
-        .getUTCMinutes() + 100)
-        .toString().substring(1)}:${(dataHoraObj.getUTCSeconds() + 100)
-        .toString().substring(1)}`;
-
-// console.log(dataHoraFormatada);
-
     useEffect(() => {
 
         axios.get('http://api.futeboltotal.cloud/jogos')
@@ -43,16 +28,24 @@ export default function Partidas() {
                     {partidas
                         .slice()
                         .sort((a, b) => a.data_jogo.localeCompare(b.data_jogo))
-                        .map(partida => (
-                            <li key={partida.id}>
+                        .map(partida => {
+
+                            const dataHoraJogo = new Date(partida.data_jogo);
+                            dataHoraJogo.setHours(dataHoraJogo.getHours() + 3);
+
+                            return (
+
+                                <li key={partida.id}>
                                 {partida.nome_time_casa} vs {partida.nome_time_visitante} <br />
-                                <span>Data do Jogo: </span> <span className={styles.style}> {dataHoraFormatada} </span> <br />
+                                <span>Data do Jogo: </span> <span className={styles.style}> {dataHoraJogo.toLocaleString()} </span> <br />
                                 <span>Local do Jogo: </span> <span className={styles.style}> {partida.estadio_nome} </span> <br />
                                 <span>Árbitro: </span> <span className={styles.style}> {partida.arbitro} </span>
 
                         </li>
+
+                        )}
                         
-                    ))}
+                    )}
 
                 </ul>
  
