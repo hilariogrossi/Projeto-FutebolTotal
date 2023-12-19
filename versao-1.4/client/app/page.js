@@ -10,7 +10,7 @@ const Noticia = ({ title, image, href }) => (
   <>
     <a href={href} className={styles.noticia_1} target='_blank'>
       <h2 className={styles.titleFirstPage}>{title}</h2>
-      <img src={image} />
+      <img src={image} className={styles.imageFirstPage} />
 
     </a>
   
@@ -60,7 +60,7 @@ export default function Home() {
           ))
         
         ) : (
-          
+
           <p>Nenhuma notícia encontrada.</p>
 
         )}
