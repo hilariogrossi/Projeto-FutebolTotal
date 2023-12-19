@@ -43,45 +43,58 @@ export default function Times() {
               .slice()
               .sort((a, b) => a.nome.localeCompare(b.nome))
               .map(time => (
+                
                 <li key={time.id}>
                   <span>Nome do Time: </span> {time.nome} <br />
                   <span>Ano de Fundação: </span> {time.ano_fundacao} <br />
                   <span>Cidade, Estado: </span> {time.cidade_estadio}
                   <button onClick={() => openEstatisticas(time.id)} className={styles.button}>+ infos</button>
                   {estatisticas[time.id] && (
+
                     <div>
-                      <span>Estatísticas:</span><br/>
-                      <span>{`Jogos em casa: ${estatisticas[time.id].jogos_casa}`}</span><br/>
-                      <span>{`Jogos Fora: ${estatisticas[time.id].jogos_fora}`}</span><br/>
-                      <span>{`Jogos Totais: ${estatisticas[time.id].jogos_totais}`}</span><br/>
-                      <span>{`Vitórias em casa: ${estatisticas[time.id].vitorias_casa}`}</span><br/>
-                      <span>{`Vitórias Fora: ${estatisticas[time.id].vitorias_fora}`}</span><br/>
-                      <span>{`Empates em casa: ${estatisticas[time.id].empates_casa}`}</span><br/>
-                      <span>{`Empates fora: ${estatisticas[time.id].empates_fora}`}</span><br/>
-                      <span>{`Vitórias Totais: ${estatisticas[time.id].vitorias_totais}`}</span><br/>
-                      <span>{`Empates Totais: ${estatisticas[time.id].empates_totais}`}</span><br/>
-                      <span>{`Derrotas em casa: ${estatisticas[time.id].derrotas_casa}`}</span><br/>
-                      <span>{`Derrotas fora: ${estatisticas[time.id].derrotas_fora}`}</span><br/>
-                      <span>{`Derrotas Totais: ${estatisticas[time.id].derrotas_totais}`}</span><br/>
-                      <span>{`Gols Totais: ${estatisticas[time.id].gols_totais}`}</span><br/>
-                      <span>{`Gols em casa: ${estatisticas[time.id].gols_casa}`}</span><br/>
-                      <span>{`Gols Fora: ${estatisticas[time.id].gols_fora}`}</span><br/>
-                      <span>{`Gols Sofridos: ${estatisticas[time.id].gols_sofridos}`}</span><br/>
-                      <span>{`Não sofreu gol em casa: ${estatisticas[time.id].nao_sofreu_gol_casa}`}</span><br/>
-                      <span>{`Não sofreu gol fora: ${estatisticas[time.id].nao_sofreu_gol_fora}`}</span><br/>
-                      <span>{`Não marcou gol em casa: ${estatisticas[time.id].nao_marcou_gol_casa}`}</span><br/>
-                      <span>{`Não marcou gol fora: ${estatisticas[time.id].nao_marcou_gol_fora}`}</span><br/>
-                      <span>{`Pênaltis convertidos: ${estatisticas[time.id].penaltis_convertidos}`}</span><br/>
-                      <span>{`Pênaltis perdidos: ${estatisticas[time.id].penaltis_perdidos}`}</span><br/>
-                      <span>{`Pênaltis totais: ${estatisticas[time.id].penaltis_totais}`}</span><br/>
-                      <span>{`Cartões Amarelos: ${estatisticas[time.id].cartoes_amarelos}`}</span><br/>
-                      <span>{`Cartões Vermelhos: ${estatisticas[time.id].cartoes_vermelhos}`}</span><br/>
+                      <br/ >
+                      <span>Estatísticas:</span><br/ >
+                      <span>Jogos Totais: <a className={styles.colorStatistics}>{`${estatisticas[time.id].jogos_totais}`}</a></span> <br/ >
+                      <span>Jogos em casa: <a className={styles.colorStatistics}>{`${estatisticas[time.id].jogos_casa}`}</a></span> <br/ >
+                      <span>Jogos Fora: <a className={styles.colorStatistics}>{`${estatisticas[time.id].jogos_fora}`}</a></span> <br/>
+                      <span>Vitórias em casa: <a className={styles.colorStatistics}>{`${estatisticas[time.id].vitorias_casa}`}</a></span> <br/ >
+                      <span>Vitórias Fora: <a className={styles.colorStatistics}>{`${estatisticas[time.id].vitorias_fora}`}</a></span> <br/ >
+                      <span>Empates em casa: <a className={styles.colorStatistics}>{`${estatisticas[time.id].empates_casa}`}</a></span> <br />
+                      <span>Empates fora: <a className={styles.colorStatistics}>{`${estatisticas[time.id].empates_fora}`}</a></span> <br />
+                      <span>Vitórias Totais: <a className={styles.colorStatistics}>{`${estatisticas[time.id].vitorias_totais}`}</a></span> <br />
+                      <span>Empates Totais: <a className={styles.colorStatistics}>{`${estatisticas[time.id].empates_totais}`}</a></span> <br />
+                      <span>Derrotas em casa: <a className={styles.colorStatistics}>{`${estatisticas[time.id].derrotas_casa}`}</a></span> <br />
+                      <span>Derrotas fora: <a className={styles.colorStatistics}>{`${estatisticas[time.id].derrotas_fora}`}</a></span> <br />
+                      <span>Derrotas Totais: <a className={styles.colorStatistics}>{`${estatisticas[time.id].derrotas_totais}`}</a></span> <br />
+                      <span>Gols em casa: <a className={styles.colorStatistics}>{`${estatisticas[time.id].gols_casa}`}</a></span> <br />
+                      <span>Gols Fora: <a className={styles.colorStatistics}>{`${estatisticas[time.id].gols_fora}`}</a></span> <br />
+                      <span>Gols Totais: <a className={styles.colorStatistics}>{`${estatisticas[time.id].gols_totais}`}</a></span> <br />
+                      <span>Gols Sofridos: <a className={styles.colorStatistics}>{`${estatisticas[time.id].gols_sofridos}`}</a></span> <br />
+                      <span>Não sofreu gol em casa: <a className={styles.colorStatistics}>{`${estatisticas[time.id].nao_sofreu_gol_casa}`}</a></span> <br />
+                      <span>Não sofreu gol fora: <a className={styles.colorStatistics}>{`${estatisticas[time.id].nao_sofreu_gol_fora}`}</a></span> <br />
+                      <span>Não marcou gol em casa: <a className={styles.colorStatistics}>{`${estatisticas[time.id].nao_marcou_gol_casa}`}</a></span> <br />
+                      <span>Não marcou gol fora: <a className={styles.colorStatistics}>{`${estatisticas[time.id].nao_marcou_gol_fora}`}</a></span> <br />
+                      <span>Pênaltis convertidos: <a className={styles.colorStatistics}>{`${estatisticas[time.id].penaltis_convertidos}`}</a></span> <br />
+                      <span>Pênaltis perdidos: <a className={styles.colorStatistics}>{`${estatisticas[time.id].penaltis_perdidos}`}</a></span>< br />
+                      <span>Pênaltis totais: <a className={styles.colorStatistics}>{`${estatisticas[time.id].penaltis_totais}`}</a></span> <br />
+                      <span>Cartões Amarelos: <a className={styles.colorStatistics}>{`${estatisticas[time.id].cartoes_amarelos}`}</a></span> <br />
+                      <span>Cartões Vermelhos: <a className={styles.colorStatistics}>{`${estatisticas[time.id].cartoes_vermelhos}`}</a></span> <br />
+
                     </div>
+
                   )}
+
                 </li>
+
               ))}
+
           </ul>
+
         </div>
+
       </>
+
     );
+
   }
+  
