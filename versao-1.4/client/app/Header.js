@@ -116,7 +116,7 @@ export default function Header() {
         </span>
 
         <span className={styles.span_1}>
-          <a href="/competicoes" className='tag-a' target='_blank'>Competições</a>
+          <a href="/competicoes" className='tag-a' target='_blank'>Tabela</a>
 
         </span>
 

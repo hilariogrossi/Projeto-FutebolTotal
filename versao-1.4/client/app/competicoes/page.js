@@ -26,7 +26,7 @@ export default function Competicoes() {
         <>
             <Header />
 
-            <h1 className={styles.h1}>Brasileirão 2023</h1>
+            <h1 className={styles.h1}>Tabela do Brasileirão 2023 - Série A</h1>
 
             <div className={styles.container}>
 

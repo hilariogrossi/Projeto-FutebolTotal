@@ -22,7 +22,7 @@ export default function Partidas() {
         .toString().substring(1)}:${(dataHoraObj.getUTCSeconds() + 100)
         .toString().substring(1)}`;
 
-console.log(dataHoraFormatada);
+// console.log(dataHoraFormatada);
 
     useEffect(() => {
 
