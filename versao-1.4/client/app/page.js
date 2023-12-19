@@ -60,6 +60,7 @@ export default function Home() {
           ))
         
         ) : (
+          
           <p>Nenhuma notícia encontrada.</p>
 
         )}
