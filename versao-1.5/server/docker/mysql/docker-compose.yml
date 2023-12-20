@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: futebol_total_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: futebol_total
+      MYSQL_USER: futebol_total
+      MYSQL_PASSWORD: futebol_total
+      MYSQL_DATABASE: futebol_total
+    ports:
+      - "3306:3306"

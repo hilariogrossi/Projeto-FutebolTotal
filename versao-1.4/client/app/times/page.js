@@ -10,28 +10,38 @@ export default function Times() {
     const [estatisticas, setEstatisticas] = useState({});
   
     useEffect(() => {
+
       axios.get('http://api.futeboltotal.cloud/times')
         .then(response => setTimes(response.data))
         .catch(error => console.error('Erro ao obter dados do servidor:', error));
+
     }, []);
   
     const fetchEstatisticas = async (timeId) => {
+
       try {
         const response = await axios.get(`http://api.futeboltotal.cloud/times_estatisticas/${timeId}`);
         setEstatisticas({ ...estatisticas, [timeId]: response.data[0] });
+
       } catch (error) {
         console.error('Erro ao obter estatísticas do time:', error);
+
       }
+
     };
   
     const openEstatisticas = (timeId) => {
       setEstatisticas({})
+
       if (!estatisticas[timeId]) {
         fetchEstatisticas(timeId);
+
       } 
+
     };
   
     return (
+      
       <>
         <Header />
   
@@ -97,4 +107,3 @@ export default function Times() {
     );
 
   }
-  

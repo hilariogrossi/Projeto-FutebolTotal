@@ -1,0 +1,4 @@
+DB_HOST=localhost
+DB_USER=futebol_total
+DB_PASSWORD=futebol_total
+DB_DATABASE=futebol_total
